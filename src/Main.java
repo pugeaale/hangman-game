@@ -13,6 +13,7 @@ public class Main {
         }
 
         char[] targetWorld = getOneRandomWord(words).toCharArray();
+        System.out.println(targetWorld.length);
 
     }
 
