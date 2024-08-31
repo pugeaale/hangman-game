@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -14,6 +15,8 @@ public class Main {
 
         char[] targetWorld = getOneRandomWord(words).toCharArray();
         System.out.println(targetWorld.length);
+        char[] display = createTargetDisplay(targetWorld.length);
+        System.out.println(Arrays.toString(display));
 
     }
 
@@ -28,5 +31,13 @@ public class Main {
         Random randomizer = new Random();
         int index = randomizer.nextInt(words.length);
         return words[index];
+    }
+
+    private static char[] createTargetDisplay(int length) {
+        char[] display = new char[length];
+        for( int i = 0 ; i < length ; i++) {
+            display[i] = '_';
+        }
+        return display;
     }
 }
