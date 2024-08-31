@@ -1,23 +1,24 @@
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hi !");
         String[] words = createWordsArray();
-        for(  String name :  words) {
-            System.out.println(name);
-        }
-        for(int i = 0 ; i < 10 ; i++) {
-            System.out.println(getOneRandomWord(words));
-        }
 
         char[] targetWorld = getOneRandomWord(words).toCharArray();
-        System.out.println(targetWorld.length);
         char[] display = createTargetDisplay(targetWorld.length);
-        System.out.println(Arrays.toString(display));
 
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter a char : ");
+        String userinput = scan.nextLine();
+        if(userinput.length()  == 1) {
+            char c = userinput.charAt(0);
+        } else {
+            System.out.println("at least 1 char and only one please");
+        }
     }
 
     private static String[] createWordsArray() {
