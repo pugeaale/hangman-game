@@ -12,6 +12,9 @@ public class Main {
             System.out.println(getOneRandomWord(words));
         }
 
+        char[] targetWorld = getOneRandomWord(words).toCharArray();
+        System.out.println(targetWorld.length);
+
     }
 
     private static String[] createWordsArray() {
